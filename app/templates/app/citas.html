@@ -1,0 +1,29 @@
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<h2>Citas</h2>
+{% if citas %}
+<table border="2", cellpadding="5">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cita in citas %}
+        <tr>
+            <td>{{ cita.nombre }}</td>
+            <td>{{ cita.fecha }}</td>
+            <td>{{ cita.hora }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'medicos_list' %}" class="btn btn-primary">Volver</a>
+{% else %}
+<p>No hay citas disponibles para este medico.</p>
+<a href="{% url 'medicos_list' %}">Volver</a>
+{% endif %}
+{% endblock %}

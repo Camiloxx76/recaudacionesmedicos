@@ -1,0 +1,20 @@
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<h1>Ingresar Recaudación para el Médico: {{ medico.nombre }}</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<a href="{% url 'recaudaciones_medico' medico_id=medico.id %}">Volver</a>
+{% endblock %}

@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body1 {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+table {
+    color: black;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead1 {
+    background: rgba(243, 140, 210, 0.4);
+}
+
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px rgba(255, 255, 255, 255);
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+    tbody tr:hover {
+        background: rgba(243, 140, 210, 0.4);
+    }
+
+.container {
+    border: solid 1px rgba(255, 255, 255, 255);
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: #CCE8F8;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0px;
+    }
+
+    ;
+}
+
+.boton-enlace {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F0F5D1;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 50px;
+    margin-left: 60px;
+}
+
+.contenido-enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-enlace {
+    margin-left: 10px;
+    /* Espacio entre la imagen y el texto */
+}
+
+.imagen-enlace {
+    width: 30px;
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.barritaindex {
+    Fill: Solid #F0F5D1;
+    box-shadow: 25%;
+    border-radius: 4px;
+    Offset: 0px, 4px rgba(0, 0, 0, 0.25)
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    /* Ajusta el alto según tus necesidades */
+}
+
+.table-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    /* Ajusta el ancho máximo según tus necesidades */
+    transform: translateY(50%);
+    /* Ajusta la posición vertical */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+    .table thead th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .table tbody td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+.table-responsive {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.btn-historial {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #adadad;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+    .btn-historial:hover {
+        background-color: #0056b3;
+    }
+
+/* Estilos adicionales para hacer el botón responsivo */
+@media (max-width: 768px) {
+    .btn-historial {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

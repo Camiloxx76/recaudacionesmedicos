@@ -1,0 +1,17 @@
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<h1>Listado de Médicos</h1>
+<ul>
+
+    {% for medico in medicos %}
+    <li>
+        {{ medico.nombre }} - {{medico.especialidad}} -
+        <a href="{% url 'citas_medico' medico_id=medico.id %}">Ver citas</a> -
+        <a href="{% url 'recaudaciones_medico' medico.id %}">Ver recaudaciones</a>
+    </li>
+    {% empty %}
+    <li>No hay médicos registrados</li>
+    {% endfor %}
+</ul>
+{% endblock %}

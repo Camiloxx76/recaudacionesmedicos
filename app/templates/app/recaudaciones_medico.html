@@ -1,0 +1,33 @@
+{% extends 'app/layout.html' %}
+
+{% block content %}
+<h1>Recaudaciones del Médico: {{ medico.nombre }}</h1>
+{% if recaudaciones %}
+<table border="2" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Monto</th>
+            <th>Paciente</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for recaudacion in recaudaciones %}
+        <tr>
+            <td>{{ recaudacion.fecha }}</td>
+            <td>{{ recaudacion.hora }}</td>
+            <td>{{ recaudacion.monto }}</td>
+            <td> {{recaudacion.cita}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No se ha registrado ninguna recaudación para este médico.</p>
+{% endif %}
+
+<a href="{% url 'ingresar_recaudacion' medico_id=medico.id %}">Ingresar recaudación</a>
+<p> </p>
+<a href="{% url 'medicos_list' %}">Volver</a>
+{% endblock %}
